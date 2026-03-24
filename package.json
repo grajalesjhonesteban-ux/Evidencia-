@@ -1,0 +1,33 @@
+{
+  "name": "api-node",
+  "version": "1.0.0",
+  "description": "``git --version ``\r ``node -v``\r ``npm -v``\r ``git init``\r ``git add``\r ``git commit -m \"v1\"``\r ``added 65 packages, and audited 66 packages in 4s``\r ``added 65 packages, and audited 66 packages in 4s``\r **inicias un proyecto**\r ``npm init -y``",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grajalesjhonesteban-ux/v1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/grajalesjhonesteban-ux/v1/issues"
+  },
+  "homepage": "https://github.com/grajalesjhonesteban-ux/v1#readme",
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "mysql2": "^3.16.3",
+    "pg": "^8.18.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
