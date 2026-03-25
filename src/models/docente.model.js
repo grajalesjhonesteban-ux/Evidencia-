@@ -1,33 +1,33 @@
 const{ DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const Pais = require('./pais.model');
-const Departamento = sequelize.define('Departamento',{
+const Curso = require('./curso.model');
+const Docente = sequelize.define('Docente',{
     id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    nombre:{
+    nombre_docente:{
         type: DataTypes.STRING,
         allowNull: false,
     },
-  paisId:{
+  cursoId:{
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model:Pais,
+            model:Curso,
             key: 'id'
         }, onDelete: 'CASCADE'
   }
     
 
 },{
-    tableName: 'departamentos',
+    tableName: 'docentes',
     timestamps: true,
     indexes:[
         {unique:true,
-        fields:['nombre','paisId']
+        fields:['nombre_docente','cursoId']
     }
     ]
 });
-module.exports = Departamento;
+module.exports = Docente;
