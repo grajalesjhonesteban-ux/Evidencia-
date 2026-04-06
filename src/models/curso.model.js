@@ -1,5 +1,7 @@
 const{ DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
+const { obtenerEstudiantePorId } = require('../services/Estudiante.service');
+const Estudiante = require('./Estudiante.models');
 const Curso = sequelize.define('Curso',{
     id:{
         type: DataTypes.INTEGER,
@@ -15,11 +17,14 @@ const Curso = sequelize.define('Curso',{
         type: DataTypes.STRING,
         allowNull: false
     },
-
-
-  
-    
-
+       estudianteId:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model:Estudiante,
+            key: 'id'
+        }, onDelete: 'CASCADE'
+  }
 },{
     tableName: 'cursos',
     timestamps: true
