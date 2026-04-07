@@ -23,7 +23,15 @@ const Estudiante = sequelize.define('Estudiante',{
         type: DataTypes.STRING,
         allowNull: false,
         unique: true
-    }
+    },
+    primera_opcion:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    segunda_opcion:{
+        type: DataTypes.STRING,
+        allowNull: false 
+    },                               
 
 },{
     tableName: 'estudiantes',

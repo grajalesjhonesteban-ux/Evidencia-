@@ -2,13 +2,15 @@ const express =require('express');
 const estudianteRoutes = require('./routes/Estudiante.routes');
 const cursoRoutes = require('./routes/curso.routes');
 const docenteRoutes = require('./routes/docente.routes');
+const asignacionRoutes = require('./routes/asignacion.routes');
 const app =express();
 
 app.use(express.json());
 
 app.use('/api/estudiantes',estudianteRoutes);
 app.use('/api/cursos',cursoRoutes); 
-app.use('/api/docentes',docenteRoutes);   
+app.use('/api/docentes',docenteRoutes); 
+app.use('/api/asignaciones',asignacionRoutes);  
 app.get('/',(req,res)=>{
     res.send('🆗 API funcionando correctamente')
 
