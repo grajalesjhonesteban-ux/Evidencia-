@@ -10,7 +10,7 @@ const Asignacion = sequelize.define('Asignacion',{
         primaryKey: true
     },
     fecha_asignacion:{
-        type: DataTypes.STRING,
+        type: DataTypes.DATE,
         allowNull: false
     },
     estudianteId:{
